@@ -35,11 +35,11 @@ const MOCK_USERS: User[] = [
   {
     id: '1',
     email: 'alex@student.com',
-    name: 'Александр Петров',
+    name: 'Саят Оразкуловандр Петров',
     role: 'teenager',
     profile: {
       age: 16,
-      city: 'Москва',
+      city: 'Астана',
       school: 'Лицей №1',
       interests: ['программирование', 'дизайн', 'игры'],
       skills: ['JavaScript', 'Python', 'Figma']

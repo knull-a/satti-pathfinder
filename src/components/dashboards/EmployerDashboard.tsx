@@ -26,7 +26,7 @@ const EmployerDashboard = () => {
       applications: 12,
       views: 45,
       created: "2024-01-15",
-      location: "Москва",
+      location: "Астана",
       type: "Стажировка",
       duration: "3 месяца"
     },
@@ -48,7 +48,7 @@ const EmployerDashboard = () => {
       applications: 0,
       views: 0,
       created: "2024-01-22",
-      location: "Москва",
+      location: "Астана",
       type: "Стажировка",
       duration: "4 месяца"
     }
@@ -57,9 +57,9 @@ const EmployerDashboard = () => {
   const candidates = [
     {
       id: 1,
-      name: "Александр Петров",
+      name: "Саят Оразкуловандр Петров",
       age: 16,
-      location: "Москва",
+      location: "Астана",
       skills: ["JavaScript", "React", "HTML/CSS"],
       match: 95,
       status: "new",
@@ -81,7 +81,7 @@ const EmployerDashboard = () => {
       id: 3,
       name: "Дмитрий Козлов",
       age: 16,
-      location: "Москва",
+      location: "Астана",
       skills: ["Figma", "Photoshop", "UI Design"],
       match: 92,
       status: "interview",

@@ -140,7 +140,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-medium">Email</div>
-                <div className="text-sm text-muted-foreground">support@sattilink.com</div>
+                <div className="text-sm text-muted-foreground">support@sattilink.kz</div>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -149,7 +149,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-medium">Телефон</div>
-                <div className="text-sm text-muted-foreground">+7 (000) 000-00-00</div>
+                <div className="text-sm text-muted-foreground">+7 (707) 123-45-67</div>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -158,7 +158,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-medium">Адрес</div>
-                <div className="text-sm text-muted-foreground">Москва, Россия</div>
+                <div className="text-sm text-muted-foreground">Астана, Казахстан</div>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © 2024 Satti Link. Все права защищены. Создано с ❤️ для развития молодых талантов.
+              © 2025 Satti Link. Все права защищены. Создано с ❤️ для развития молодых талантов.
             </p>
           </div>
         </div>

@@ -28,7 +28,7 @@ const TeenagerDashboard = () => {
       company: "ТехСтарт",
       type: "Стажировка",
       duration: "3 месяца",
-      location: "Москва",
+      location: "Астана",
       match: 95,
       tags: ["JavaScript", "React", "HTML/CSS"]
     },
