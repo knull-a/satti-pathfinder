@@ -47,7 +47,10 @@ const Header = () => {
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">S</span>
               </div>
-              <span className="font-bold text-xl text-foreground">Satti Link</span>
+              <div className="flex flex-col">
+                <span className="font-bold text-xl text-foreground">Satti Link</span>
+                <span className="text-xs text-muted-foreground">by Daryndy Bala</span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}

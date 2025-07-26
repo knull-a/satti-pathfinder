@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
+import studentsImage from "/students-2.png";
 
 const ActivitiesSection = () => {
   const activities = [
@@ -51,6 +52,32 @@ const ActivitiesSection = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Разнообразные форматы погружения в профессии — от наблюдения до практических проектов
           </p>
+        </div>
+
+        {/* Image section */}
+        <div className="flex justify-center mb-16">
+          <div className="relative max-w-4xl">
+            <img 
+              src={studentsImage} 
+              alt="Students participating in career activities" 
+              className="w-[500px] h-[500px] rounded-2xl shadow-hero object-cover"
+            />
+            {/* Floating decorative elements */}
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow animate-float">
+              <Zap className="w-8 h-8 text-white" />
+            </div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-success rounded-2xl flex items-center justify-center shadow-glow animate-float" style={{
+              animationDelay: "1s"
+            }}>
+              <span className="text-2xl">🎯</span>
+            </div>
+            
+            {/* Floating stats */}
+            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-soft">
+              <div className="text-2xl font-bold text-primary">500+</div>
+              <div className="text-sm text-muted-foreground">Активных участников</div>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
