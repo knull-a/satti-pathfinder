@@ -59,7 +59,7 @@ const Features = () => {
 
   const userTypes = [
     {
-      title: "Для подростков 12-17 лет",
+      title: "Для подростков и студентов",
       description: "Открой свои таланты и найди направление для будущей карьеры",
       features: [
         "Профориентационное тестирование",
@@ -71,7 +71,7 @@ const Features = () => {
       gradient: "bg-gradient-to-br from-primary/20 to-accent/20"
     },
     {
-      title: "Для работодателей",
+      title: "Для университетов и работодателей",
       description: "Найдите талантливых молодых специалистов для своей команды",
       features: [
         "Размещение вакансий и задач",
@@ -83,7 +83,7 @@ const Features = () => {
       gradient: "bg-gradient-to-br from-success/20 to-primary/20"
     },
     {
-      title: "Для наставников",
+      title: "Для менторов",
       description: "Делитесь опытом и помогайте молодым людям найти свой путь",
       features: [
         "Профиль эксперта",
@@ -143,7 +143,7 @@ const Features = () => {
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
                       <type.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h4 className="text-xl font-semibold">Для студентов и подростков</h4>
+                    <h4 className="text-xl font-semibold">{type.title}</h4>
                   </div>
                   
                   <p className="text-muted-foreground">{type.description}</p>

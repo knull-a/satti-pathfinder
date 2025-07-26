@@ -5,7 +5,7 @@ const Stats = () => {
     {
       icon: Users,
       number: "1,500+",
-      label: "Активных подростков",
+      label: "Активных студентов",
       description: "Зарегистрированных пользователей 12-17 лет",
       color: "text-primary",
       bgColor: "bg-primary/10"
