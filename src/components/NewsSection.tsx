@@ -43,43 +43,89 @@ const NewsSection = () => {
               </div>
               
               <h3 className="text-2xl md:text-3xl font-bold">
-                BALA STORE — первая площадка в Казахстане для заработка подростков
+                BALA STORE — предпринимательство для подростков
               </h3>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Уникальная платформа, где подростки развивают предпринимательское мышление через реальную практику: 
-                продажи, обучение, участие в ярмарках, челленджах и мастер-классах от экспертов.
+                Первая в Казахстане офлайн- и онлайн-платформа, где подростки могут зарабатывать и развивать 
+                предпринимательское мышление. Это не просто маркет — это учебная и практическая среда для 
+                юных бизнесменов 12–17 лет.
               </p>
               
+              {/* Instagram Video */}
+              <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden bg-gradient-to-br from-pink-100 to-purple-100">
+                <iframe
+                  src="https://www.instagram.com/reel/DMh8v6sTY3n/embed"
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  title="BALA STORE Instagram Reel"
+                  loading="lazy"
+                />
+              </div>
+              
               <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 space-y-4">
-                <h4 className="font-semibold text-lg">Что включает участие:</h4>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-center">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success" />
-                    Обучение основам продаж и маркетинга
+                <h4 className="font-semibold text-lg">🔧 Что дает BALA STORE подростку:</h4>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start">
+                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
+                    <span>Продавать свои товары или услуги (ручная работа, стикеры, консультации, выпечка и др.)</span>
                   </li>
-                  <li className="flex items-center">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success" />
-                    Участие в ярмарках и выставках
+                  <li className="flex items-start">
+                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
+                    <span>Получать опыт реальных продаж — с арендой, рекламой и фидбеком</span>
                   </li>
-                  <li className="flex items-center">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success" />
-                    Челленджи и конкурсы с призами
+                  <li className="flex items-start">
+                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
+                    <span>Понимать основы бизнеса: идея → упаковка → продвижение → сделка</span>
                   </li>
-                  <li className="flex items-center">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success" />
-                    Мастер-классы от успешных предпринимателей
+                  <li className="flex items-start">
+                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
+                    <span>Зарабатывать первые реальные деньги</span>
+                  </li>
+                  <li className="flex items-start">
+                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
+                    <span>Участвовать в маркетах, челленджах, презентациях, шоу-питчингах</span>
                   </li>
                 </ul>
               </div>
               
+              <div className="bg-accent/10 backdrop-blur-sm rounded-xl p-6 space-y-4">
+                <h4 className="font-semibold text-lg">📅 Регулярные форматы:</h4>
+                <div className="grid md:grid-cols-2 gap-3 text-sm text-muted-foreground">
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 mr-2 text-accent" />
+                    BALA BATTLE — соревнования по продажам
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 mr-2 text-accent" />
+                    Бизнес-ярмарки в ТРЦ и коворкингах
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 mr-2 text-accent" />
+                    Мастер-классы от предпринимателей
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 mr-2 text-accent" />
+                    Онлайн-челленджи с наставничеством
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-primary/10 backdrop-blur-sm rounded-xl p-6">
+                <h4 className="font-semibold text-lg mb-3">🎯 Миссия проекта:</h4>
+                <p className="text-muted-foreground">
+                  Развивать лидерство, самостоятельность и креативность у подростков. 
+                  Платформа становится частью экосистемы осознанного взросления.
+                </p>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="group">
-                  Оставить заявку
+                  Хочешь открыть свою точку?
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button variant="outline" size="lg" className="group">
-                  Узнать больше
+                  Узнать больше о BALA STORE
                   <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 </Button>
               </div>
