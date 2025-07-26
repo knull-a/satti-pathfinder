@@ -143,7 +143,7 @@ const Features = () => {
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
                       <type.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h4 className="text-xl font-semibold">{type.title}</h4>
+                    <h4 className="text-xl font-semibold">Для студентов и подростков</h4>
                   </div>
                   
                   <p className="text-muted-foreground">{type.description}</p>
