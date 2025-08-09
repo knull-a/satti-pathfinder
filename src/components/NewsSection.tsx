@@ -120,11 +120,20 @@ const NewsSection = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="group">
+                <Button 
+                  size="lg" 
+                  className="group"
+                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                >
                   Хочешь открыть свою точку?
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" size="lg" className="group">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="group"
+                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                >
                   Узнать больше о BALA STORE
                   <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 </Button>
@@ -144,7 +153,12 @@ const NewsSection = () => {
                 <p className="text-sm text-muted-foreground">
                   5-дневный курс о том, как правильно выбрать профессию и построить карьерный путь
                 </p>
-                <Button variant="outline" size="sm" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                >
                   Записаться
                 </Button>
               </div>
@@ -163,7 +177,12 @@ const NewsSection = () => {
                 <div className="text-xs text-muted-foreground">
                   15-16 февраля, Астана
                 </div>
-                <Button variant="outline" size="sm" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                >
                   Участвовать
                 </Button>
               </div>
@@ -179,7 +198,12 @@ const NewsSection = () => {
                 <div className="text-xs text-muted-foreground">
                   20 января 2025
                 </div>
-                <Button variant="outline" size="sm" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                >
                   Подробнее
                 </Button>
               </div>
@@ -189,7 +213,12 @@ const NewsSection = () => {
 
         {/* Load More Section */}
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="group">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="group"
+            onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+          >
             Показать все новости
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>

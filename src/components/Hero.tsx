@@ -55,11 +55,21 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="group">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group"
+                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+              >
                 Начать путешествие
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="group">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="group"
+                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+              >
                 <Play className="w-5 h-5" />
                 Смотреть видео
               </Button>
