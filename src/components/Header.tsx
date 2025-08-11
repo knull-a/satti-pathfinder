@@ -20,7 +20,7 @@ const Header = () => {
                 <span className="text-white font-bold text-lg">S</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-xl text-foreground">Satti Link</span>
+                <span className="font-bold text-xl text-foreground">Tal App</span>
                 <span className="text-xs text-muted-foreground">by Daryndy Bala</span>
               </div>
             </div>

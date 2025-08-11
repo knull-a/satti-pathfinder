@@ -22,7 +22,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">S</span>
               </div>
-              <span className="font-bold text-xl">Satti Link</span>
+              <span className="font-bold text-xl">Tal App</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Современная платформа профориентации для подростков. Помогаем найти призвание и построить успешную карьеру.
@@ -166,7 +166,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © 2025 Satti Link. Все права защищены. Создано с ❤️ для развития молодых талантов.
+              © 2025 Tal App. Все права защищены. Создано с ❤️ для развития молодых талантов.
             </p>
           </div>
         </div>
