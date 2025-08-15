@@ -123,7 +123,7 @@ const NewsSection = () => {
                 <Button 
                   size="lg" 
                   className="group"
-                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
                 >
                   Хочешь открыть свою точку?
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -132,7 +132,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="lg" 
                   className="group"
-                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
                 >
                   Узнать больше о BALA STORE
                   <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -157,7 +157,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
                 >
                   Записаться
                 </Button>
@@ -181,7 +181,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
                 >
                   Участвовать
                 </Button>
@@ -202,7 +202,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
                 >
                   Подробнее
                 </Button>
@@ -217,7 +217,7 @@ const NewsSection = () => {
             variant="outline" 
             size="lg" 
             className="group"
-            onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+            onClick={() => window.open('https://app.jaslink.kz', '_blank')}
           >
             Показать все новости
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleTryClick = () => {
-    window.open('https://app.satti-link.kz', '_blank');
+    window.open('https://app.jaslink.kz', '_blank');
   };
 
   return (
@@ -17,10 +17,10 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
+                <span className="text-white font-bold text-lg">J</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-xl text-foreground">Tal App</span>
+                <span className="font-bold text-xl text-foreground">JasLink</span>
                 <span className="text-xs text-muted-foreground">by Daryndy Bala</span>
               </div>
             </div>

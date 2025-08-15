@@ -80,7 +80,7 @@ const Features = () => {
         "Модерация всех активностей"
       ],
       icon: Briefcase,
-      gradient: "bg-gradient-to-br from-success/20 to-primary/20"
+      gradient: "bg-gradient-to-br from-[hsl(40,85%,60%)]/20 to-primary/20"
     },
     {
       title: "Для менторов",
@@ -92,7 +92,7 @@ const Features = () => {
         "Рейтинговая система"
       ],
       icon: Shield,
-      gradient: "bg-gradient-to-br from-accent/20 to-success/20"
+      gradient: "bg-gradient-to-br from-accent/20 to-[hsl(14,65%,50%)]/20"
     }
   ];
 

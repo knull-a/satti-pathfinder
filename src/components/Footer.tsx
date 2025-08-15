@@ -15,30 +15,24 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
+                <span className="text-white font-bold text-lg">J</span>
               </div>
-              <span className="font-bold text-xl">Tal App</span>
+              <span className="font-bold text-xl">JasLink</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Современная платформа профориентации для подростков. Помогаем найти призвание и построить успешную карьеру.
             </p>
             <div className="flex space-x-3">
-              <Button variant="ghost" size="icon" className="hover:text-primary">
+              <Button variant="ghost" size="icon" className="hover:text-primary" onClick={() => window.open('https://www.facebook.com/daryndybala.kz', '_blank')}>
                 <Facebook className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary">
-                <Twitter className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary">
+              <Button variant="ghost" size="icon" className="hover:text-primary" onClick={() => window.open('https://www.instagram.com/daryndybala.kz', '_blank')}>
                 <Instagram className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary">
-                <Linkedin className="w-5 h-5" />
               </Button>
             </div>
           </div>
@@ -108,7 +102,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h4 className="font-semibold text-lg">Новости и обновления</h4>
             <p className="text-muted-foreground text-sm">
               Подпишитесь на рассылку, чтобы получать последние новости и обновления платформы.
@@ -128,7 +122,7 @@ const Footer = () => {
                 Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Contact Info */}
@@ -140,7 +134,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-medium">Email</div>
-                <div className="text-sm text-muted-foreground">support@sattilink.kz</div>
+                <div className="text-sm text-muted-foreground">online@daryndybala.kz</div>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -149,7 +143,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-medium">Телефон</div>
-                <div className="text-sm text-muted-foreground">+7 (707) 123-45-67</div>
+                <div className="text-sm text-muted-foreground">+7 747 120 25 57</div>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -166,7 +160,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © 2025 Tal App. Все права защищены. Создано с ❤️ для развития молодых талантов.
+              © 2025 JasLink. Все права защищены. Создано с ❤️ для развития молодых талантов.
             </p>
           </div>
         </div>
