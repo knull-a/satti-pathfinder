@@ -10,6 +10,7 @@ import {
   Linkedin,
   ArrowRight
 } from "lucide-react";
+import LogoIcon from "./icon/LogoIcon";
 
 const Footer = () => {
   return (
@@ -19,10 +20,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">J</span>
-              </div>
-              <span className="font-bold text-xl">JasLink</span>
+              <LogoIcon />
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Современная платформа профориентации для подростков. Помогаем найти призвание и построить успешную карьеру.
@@ -160,7 +158,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © 2025 JasLink. Все права защищены. Создано с ❤️ для развития молодых талантов.
+              © 2025 OrkenLink. Все права защищены. Создано с ❤️ для развития молодых талантов.
             </p>
           </div>
         </div>

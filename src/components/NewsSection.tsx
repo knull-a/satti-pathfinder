@@ -137,7 +137,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
                 >
                   Записаться
                 </Button>
@@ -161,7 +161,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
                 >
                   Участвовать
                 </Button>
@@ -182,7 +182,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
                 >
                   Подробнее
                 </Button>

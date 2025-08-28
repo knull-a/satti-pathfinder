@@ -38,7 +38,7 @@ const Hero = () => {
                 variant="hero" 
                 size="lg" 
                 className="group"
-                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
               >
                 Начать путешествие
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -49,12 +49,12 @@ const Hero = () => {
           {/* Hero Image */}
           <div className="relative lg:block">
             <div className="relative">
-              <img src={heroImage} alt="JasLink - Career guidance platform" className="w-full h-auto rounded-2xl shadow-hero" />
+              <img src={heroImage} alt="OrkenLink - Career guidance platform" className="w-full h-auto rounded-2xl shadow-hero" />
               {/* Floating elements */}
               <div className="absolute -top-6 -right-6 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow animate-float">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 sm:w-20 sm:h-20 bg-accent rounded-2xl flex items-center justify-center shadow-glow animate-float" style={{
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 sm:w-20 sm:h-20 bg-secondary rounded-2xl flex items-center justify-center shadow-glow animate-float" style={{
               animationDelay: "1s"
             }}>
                 <Target className="w-6 h-6 text-white" />

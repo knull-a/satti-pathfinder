@@ -62,7 +62,7 @@ const AudienceSection = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {userTypes.map((type, index) => (
-              <Card key={index} className={`p-8 ${type.gradient} border-0 hover:shadow-glow transition-all duration-300`}>
+              <Card key={index} className={`p-8 ${type.gradient} text-accent-foreground border-0 hover:shadow-glow transition-all duration-300`}>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-3">
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
