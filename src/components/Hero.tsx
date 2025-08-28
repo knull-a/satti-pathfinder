@@ -21,37 +21,16 @@ const Hero = () => {
             {/* Main heading */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Открой свой
+                Открываем подросткам
                 <span className="bg-gradient-primary bg-clip-text text-transparent"> путь </span>
                 к будущей карьере
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Пройди тестирование, найди наставника и получи первые возможности 
-                для развития в интересующей сфере
+                Платформа объединяет подростков, наставников и работодателей для создания 
+                безопасной экосистемы профориентации и карьерного развития
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="flex flex-wrap gap-6">
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Users className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <div className="font-semibold text-lg">1000+</div>
-                  <div className="text-sm text-muted-foreground">Студентов</div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Target className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <div className="font-semibold text-lg">500+</div>
-                  <div className="text-sm text-muted-foreground">Возможностей</div>
-                </div>
-              </div>
-            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
@@ -59,19 +38,10 @@ const Hero = () => {
                 variant="hero" 
                 size="lg" 
                 className="group"
-                onClick={() => window.open('https://app.jaslink.kz', '_blank')}
+                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
               >
                 Начать путешествие
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="group"
-                onClick={() => window.open('https://app.jaslink.kz', '_blank')}
-              >
-                <Play className="w-5 h-5" />
-                Смотреть видео
               </Button>
             </div>
           </div>

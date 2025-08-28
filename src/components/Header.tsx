@@ -5,9 +5,6 @@ import { Menu, X } from "lucide-react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleTryClick = () => {
-    window.open('https://app.jaslink.kz', '_blank');
-  };
 
   return (
     <>
@@ -31,19 +28,26 @@ const Header = () => {
                 О платформе
               </a>
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                Возможности
+                Подросткам и студентам
               </a>
-              <a href="#careers" className="text-muted-foreground hover:text-foreground transition-colors">
-                Карьера
+              <a href="#universities" className="text-muted-foreground hover:text-foreground transition-colors">
+                Учебным заведениям
               </a>
-              <a href="#mentors" className="text-muted-foreground hover:text-foreground transition-colors">
-                Наставники
+              <a href="#employers" className="text-muted-foreground hover:text-foreground transition-colors">
+                Работодателям
+              </a>
+              <a href="#news" className="text-muted-foreground hover:text-foreground transition-colors">
+                Новости, курсы
               </a>
             </div>
 
             {/* CTA Section */}
             <div className="hidden md:flex items-center">
-              <Button variant="hero" size="sm" onClick={handleTryClick}>
+              <Button 
+                variant="hero" 
+                size="sm" 
+                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+              >
                 Попробовать
               </Button>
             </div>
@@ -65,17 +69,25 @@ const Header = () => {
                   О платформе
                 </a>
                 <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Возможности
+                  Подросткам и студентам
                 </a>
-                <a href="#careers" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Карьера
+                <a href="#universities" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Учебным заведениям
                 </a>
-                <a href="#mentors" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Наставники
+                <a href="#employers" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Работодателям
+                </a>
+                <a href="#news" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Новости, курсы
                 </a>
                 
                 <div className="pt-4 border-t border-border">
-                  <Button variant="hero" size="sm" className="w-full" onClick={handleTryClick}>
+                  <Button 
+                    variant="hero" 
+                    size="sm" 
+                    className="w-full" 
+                    onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                  >
                     Попробовать
                   </Button>
                 </div>

@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap } from "lucide-react";
+import { Zap } from "lucide-react";
 import studentsImage from "/students-2.png";
+import ActivitiesForm from "./ActivitiesForm";
 
 const ActivitiesSection = () => {
   const activities = [
@@ -46,11 +46,11 @@ const ActivitiesSection = () => {
             <span>Активности</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            Открытые активности
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> для подростков</span>
+            Разнообразные форматы
+            <span className="bg-gradient-primary bg-clip-text text-transparent"> погружения в профессию</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Разнообразные форматы погружения в профессии — от наблюдения до практических проектов
+            От наблюдения до практических проектов
           </p>
         </div>
 
@@ -72,11 +72,6 @@ const ActivitiesSection = () => {
               <span className="text-2xl">🎯</span>
             </div>
             
-            {/* Floating stats */}
-            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-soft">
-              <div className="text-2xl font-bold text-primary">500+</div>
-              <div className="text-sm text-muted-foreground">Активных участников</div>
-            </div>
           </div>
         </div>
 
@@ -94,22 +89,9 @@ const ActivitiesSection = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Готов попробовать себя в деле?</h3>
-            <p className="text-muted-foreground mb-6 text-lg">
-              Участвуй в активностях, находи наставников и открывай новые горизонты для своей карьеры
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group">
-                Посмотреть активности
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Календарь событий
-              </Button>
-            </div>
-          </div>
+        {/* Registration Form */}
+        <div className="max-w-md mx-auto">
+          <ActivitiesForm />
         </div>
       </div>
     </section>

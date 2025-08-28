@@ -44,7 +44,7 @@ const UniversitySection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32">
+    <section id="universities" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
@@ -83,13 +83,15 @@ const UniversitySection = () => {
             <p className="text-muted-foreground mb-6 text-lg">
               Подключайтесь к платформе и начните взаимодействие с будущими студентами уже сегодня
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="group">
+            <div className="flex justify-center">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="group"
+                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+              >
                 Подключить учебное заведение
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Посмотреть примеры
               </Button>
             </div>
           </div>

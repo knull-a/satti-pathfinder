@@ -1,17 +1,16 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
-  ArrowRight, 
   Calendar,
-  ExternalLink,
   Newspaper,
   Star,
   TrendingUp
 } from "lucide-react";
+import NewsletterForm from "./NewsletterForm";
 
 const NewsSection = () => {
   return (
-    <section className="py-20 md:py-32">
+    <section id="news" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
@@ -119,25 +118,6 @@ const NewsSection = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="group"
-                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
-                >
-                  Хочешь открыть свою точку?
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="group"
-                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
-                >
-                  Узнать больше о BALA STORE
-                  <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                </Button>
-              </div>
             </div>
           </Card>
 
@@ -157,7 +137,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
+                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
                 >
                   Записаться
                 </Button>
@@ -181,7 +161,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
+                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
                 >
                   Участвовать
                 </Button>
@@ -202,7 +182,7 @@ const NewsSection = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://app.jaslink.kz', '_blank')}
+                  onClick={() => window.open('https://app.satti-link.kz', '_blank')}
                 >
                   Подробнее
                 </Button>
@@ -211,17 +191,9 @@ const NewsSection = () => {
           </div>
         </div>
 
-        {/* Load More Section */}
-        <div className="text-center mt-12">
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="group"
-            onClick={() => window.open('https://app.jaslink.kz', '_blank')}
-          >
-            Показать все новости
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+        {/* Newsletter Subscription */}
+        <div className="max-w-md mx-auto mt-12">
+          <NewsletterForm />
         </div>
       </div>
     </section>
