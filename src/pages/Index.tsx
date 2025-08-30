@@ -10,14 +10,40 @@ import Footer from "@/components/Footer";
 import { TextMarquee } from "@/components/TextMarquee";
 
 const Index = () => {
+  const textItems = [
+    "Развитие",
+    "Лидерство", 
+    "Будущее",
+    "Партнёрство",
+    "Карьерa",
+    "Инновации",
+    "Образование",
+    "Экосистема",
+    "Возможности",
+    "Успех"
+  ];
+
+  const featuresItems = [
+    "Развивайся здесь!",
+    "Строй будущее!",
+    "Начни карьеру!",
+    "Стань лидером!",
+    "Открой возможности!",
+    "Создавай успех!",
+    "Достигай большего!",
+    "Выбирай развитие!",
+    "Расти вместе!",
+    "Лидируй сегодня!"
+  ]
   return (
     <div className="min-h-screen">
       <Header />
       <main>
         <Hero />
-        <TextMarquee />
+        <TextMarquee textItems={textItems} />
         <AudienceSection />
         <Features />
+        <TextMarquee textItems={featuresItems} />
         <ActivitiesSection />
         <UniversitySection />
         <EmployerSection />

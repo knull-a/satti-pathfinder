@@ -1,19 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 
-const textItems = [
-  "Развитие",
-  "Лидерство", 
-  "Будущее",
-  "Партнёрство",
-  "Карьерa",
-  "Инновации",
-  "Образование",
-  "Экосистема",
-  "Возможности",
-  "Успех"
-];
-
 const TextCard = ({ text }: { text: string }) => {
   return (
     <div
@@ -31,7 +18,7 @@ const TextCard = ({ text }: { text: string }) => {
   );
 };
 
-export function TextMarquee() {
+export function TextMarquee({ textItems }: { textItems: string[] }) {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-8 mt-24">
       <Marquee pauseOnHover className="[--duration:20s]">
