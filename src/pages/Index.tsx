@@ -7,6 +7,7 @@ import UniversitySection from "@/components/UniversitySection";
 import EmployerSection from "@/components/EmployerSection";
 import NewsSection from "@/components/NewsSection";
 import Footer from "@/components/Footer";
+import { TextMarquee } from "@/components/TextMarquee";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TextMarquee />
         <AudienceSection />
         <Features />
         <ActivitiesSection />
