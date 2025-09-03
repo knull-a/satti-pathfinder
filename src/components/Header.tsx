@@ -60,7 +60,7 @@ const Header = () => {
                 variant="hero"
                 size="sm"
                 onClick={() =>
-                  window.open("https://app.satti-link.kz", "_blank")
+                  window.open("https://app.orkenlink.kz", "_blank")
                 }
               >
                 {t('nav.try')}
@@ -118,7 +118,7 @@ const Header = () => {
                     size="sm"
                     className="w-full"
                     onClick={() =>
-                      window.open("https://app.satti-link.kz", "_blank")
+                      window.open("https://app.orkenlink.kz", "_blank")
                     }
                   >
                     {t('nav.try')}

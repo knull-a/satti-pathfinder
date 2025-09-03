@@ -1,9 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  GraduationCap, 
-  Globe, 
-  Calendar, 
+import {
+  GraduationCap,
+  Globe,
+  Calendar,
   Route,
   MessageSquare,
   ArrowRight,
@@ -86,11 +86,11 @@ const UniversitySection = () => {
               Подключайтесь к платформе и начните взаимодействие с будущими студентами уже сегодня
             </p>
             <div className="flex justify-center">
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="group"
-                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
               >
                 {t('universities.connect')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
