@@ -8,33 +8,36 @@ import EmployerSection from "@/components/EmployerSection";
 import NewsSection from "@/components/NewsSection";
 import Footer from "@/components/Footer";
 import { TextMarquee } from "@/components/TextMarquee";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+  
   const textItems = [
-    "Развитие",
-    "Лидерство", 
-    "Будущее",
-    "Партнёрство",
-    "Карьерa",
-    "Инновации",
-    "Образование",
-    "Экосистема",
-    "Возможности",
-    "Успех"
+    t('marquee.development'),
+    t('marquee.leadership'),
+    t('marquee.future'),
+    t('marquee.partnership'),
+    t('marquee.career'),
+    t('marquee.innovations'),
+    t('marquee.education'),
+    t('marquee.ecosystem'),
+    t('marquee.opportunities'),
+    t('marquee.success')
   ];
 
   const featuresItems = [
-    "Развивайся здесь!",
-    "Строй будущее!",
-    "Начни карьеру!",
-    "Стань лидером!",
-    "Открой возможности!",
-    "Создавай успех!",
-    "Достигай большего!",
-    "Выбирай развитие!",
-    "Расти вместе!",
-    "Лидируй сегодня!"
-  ]
+    t('marquee.develop'),
+    t('marquee.build'),
+    t('marquee.start'),
+    t('marquee.lead'),
+    t('marquee.open'),
+    t('marquee.create'),
+    t('marquee.achieve'),
+    t('marquee.choose'),
+    t('marquee.grow'),
+    t('marquee.leadToday')
+  ];
   return (
     <div className="min-h-screen">
       <Header />

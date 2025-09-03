@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ActivitiesForm = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const ActivitiesForm = () => {
     phone: ""
   });
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,28 +36,28 @@ const ActivitiesForm = () => {
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <CheckCircle className="w-6 h-6 text-primary" />
-            <h3 className="text-2xl font-bold">Хочешь участвовать?</h3>
+            <h3 className="text-2xl font-bold">{t('activities.form.title').split('?')[0]}?</h3>
           </div>
           <p className="text-muted-foreground">
-            Оставь контакты, и мы пришлём приглашения в новые активности
+            {t('activities.form.title').split('? ')[1]}
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Имя</Label>
+            <Label htmlFor="name">{t('activities.form.name')}</Label>
             <Input
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Ваше имя"
+              placeholder={t('activities.form.name')}
               required
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">{t('activities.form.email')}</Label>
             <Input
               id="email"
               name="email"
@@ -68,7 +70,7 @@ const ActivitiesForm = () => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="phone">Телефон</Label>
+            <Label htmlFor="phone">{t('activities.form.phone')}</Label>
             <Input
               id="phone"
               name="phone"
@@ -81,7 +83,7 @@ const ActivitiesForm = () => {
           </div>
 
           <Button type="submit" className="w-full" size="lg">
-            Отправить заявку
+            {t('activities.form.submit')}
           </Button>
         </form>
       </div>

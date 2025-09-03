@@ -10,8 +10,10 @@ import {
   School,
   Sparkles
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const UniversitySection = () => {
+  const { t } = useLanguage();
   const universityFeatures = [
     {
       icon: School,
@@ -49,14 +51,14 @@ const UniversitySection = () => {
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-accent/30 text-secondary px-4 py-2 rounded-full text-sm font-medium">
             <GraduationCap className="w-4 h-4" />
-            <span>Для колледжей и университетов</span>
+            <span>{t('universities.badge')}</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            Представьте свои программы тем,
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> кто выбирает уже сейчас</span>
+            {t('universities.title').split(' ').slice(0, -2).join(' ')}
+            <span className="bg-gradient-primary bg-clip-text text-transparent"> {t('universities.title').split(' ').slice(-2).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Привлекайте мотивированных абитуриентов, демонстрируя качество образования и уникальные возможности вашего учебного заведения
+            {t('universities.subtitle')}
           </p>
         </div>
 
@@ -88,9 +90,9 @@ const UniversitySection = () => {
                 size="lg" 
                 variant="outline" 
                 className="group"
-                onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
+                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
               >
-                Подключить учебное заведение
+                {t('universities.connect')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>

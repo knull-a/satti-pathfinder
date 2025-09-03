@@ -2,9 +2,12 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import LogoIcon from "./icon/LogoIcon";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <>
@@ -22,44 +25,45 @@ const Header = () => {
                 href="#about"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                О платформе
+                {t('nav.about')}
               </a>
               <a
                 href="#features"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Подросткам и студентам
+                {t('nav.students')}
               </a>
               <a
                 href="#universities"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Учебным заведениям
+                {t('nav.universities')}
               </a>
               <a
                 href="#employers"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Работодателям
+                {t('nav.employers')}
               </a>
               <a
                 href="#news"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Новости, курсы
+                {t('nav.news')}
               </a>
             </div>
 
             {/* CTA Section */}
-            <div className="hidden md:flex items-center">
+            <div className="hidden md:flex items-center gap-4">
+              <LanguageSwitcher />
               <Button
                 variant="hero"
                 size="sm"
                 onClick={() =>
-                  window.open("https://app.orkenlink.kz", "_blank")
+                  window.open("https://app.satti-link.kz", "_blank")
                 }
               >
-                Попробовать
+                {t('nav.try')}
               </Button>
             </div>
 
@@ -80,43 +84,44 @@ const Header = () => {
                   href="#about"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  О платформе
+                  {t('nav.about')}
                 </a>
                 <a
                   href="#features"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Подросткам и студентам
+                  {t('nav.students')}
                 </a>
                 <a
                   href="#universities"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Учебным заведениям
+                  {t('nav.universities')}
                 </a>
                 <a
                   href="#employers"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Работодателям
+                  {t('nav.employers')}
                 </a>
                 <a
                   href="#news"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Новости, курсы
+                  {t('nav.news')}
                 </a>
 
-                <div className="pt-4 border-t border-border">
+                <div className="pt-4 border-t border-border flex flex-col gap-4">
+                  <LanguageSwitcher />
                   <Button
                     variant="hero"
                     size="sm"
                     className="w-full"
                     onClick={() =>
-                      window.open("https://app.orkenlink.kz", "_blank")
+                      window.open("https://app.satti-link.kz", "_blank")
                     }
                   >
-                    Попробовать
+                    {t('nav.try')}
                   </Button>
                 </div>
               </div>

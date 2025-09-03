@@ -9,8 +9,10 @@ import {
   Building2,
   Zap
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const EmployerSection = () => {
+  const { t } = useLanguage();
   const employerFeatures = [
     {
       icon: Target,
@@ -41,14 +43,14 @@ const EmployerSection = () => {
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
             <Building2 className="w-4 h-4" />
-            <span>Для работодателей</span>
+            <span>{t('employers.badge')}</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            Привлекайте
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> талантливую молодежь</span>
+            {t('employers.title').split(' ').slice(0, -2).join(' ')}
+            <span className="bg-gradient-primary bg-clip-text text-transparent"> {t('employers.title').split(' ').slice(-2).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Инвестируйте в свое будущее: формируйте профессиональную культуру и создавайте кадровый резерв для долгосрочного успеха компании
+            {t('employers.subtitle')}
           </p>
         </div>
 
@@ -79,9 +81,9 @@ const EmployerSection = () => {
               <Button 
                 size="lg" 
                 className="group"
-                onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
+                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
               >
-                Стать партнером
+                {t('employers.partner')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>

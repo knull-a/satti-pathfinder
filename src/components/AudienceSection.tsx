@@ -5,24 +5,26 @@ import {
   Shield,
   CheckCircle
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AudienceSection = () => {
+  const { t } = useLanguage();
   const userTypes = [
     {
-      title: "Подросткам и студентам",
-      description: "Открой свои таланты и найди направление для будущей карьеры",
+      title: t('audience.students.title'),
+      description: t('audience.students.desc'),
       features: [
-        "Профориентационное тестирование",
+        t('features.testing.title'),
         "Цифровой профиль и портфолио", 
         "Поиск стажировок и вакансий",
-        "Общение с наставниками"
+        t('features.mentoring.title')
       ],
       icon: Users,
       gradient: "bg-gradient-to-br from-primary/20 to-accent/20"
     },
     {
-      title: "Университетам и работодателям",
-      description: "Найдите талантливых молодых специалистов для своей команды",
+      title: t('audience.universities.title'),
+      description: t('audience.universities.desc'),
       features: [
         "Размещение вакансий и задач",
         "Поиск кандидатов по критериям",
@@ -33,8 +35,8 @@ const AudienceSection = () => {
       gradient: "bg-gradient-to-br from-[hsl(40,85%,60%)]/20 to-primary/20"
     },
     {
-      title: "Для менторов",
-      description: "Делитесь опытом и помогайте молодым людям найти свой путь",
+      title: t('audience.mentors.title'),
+      description: t('audience.mentors.desc'),
       features: [
         "Профиль эксперта",
         "Система менторинга",
@@ -52,8 +54,8 @@ const AudienceSection = () => {
         <div className="space-y-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Для кого создана
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> платформа</span>
+              {t('audience.title').split(' ').slice(0, -1).join(' ')}
+              <span className="bg-gradient-primary bg-clip-text text-transparent"> {t('audience.title').split(' ').slice(-1).join(' ')}</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Каждая роль имеет свои уникальные возможности и инструменты для достижения целей

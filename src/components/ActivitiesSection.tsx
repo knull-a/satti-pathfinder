@@ -2,23 +2,25 @@ import { Card } from "@/components/ui/card";
 import { Zap } from "lucide-react";
 import studentsImage from "/students-2.png";
 import ActivitiesForm from "./ActivitiesForm";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ActivitiesSection = () => {
+  const { t } = useLanguage();
   const activities = [
     {
       emoji: "🌱",
-      title: "Shadowing",
-      description: "Наблюдение за работой профессионалов в реальной рабочей среде"
+      title: t('activities.shadowing.title'),
+      description: t('activities.shadowing.desc')
     },
     {
       emoji: "🎓",
-      title: "Мастер-класс",
-      description: "Практические занятия от экспертов индустрии"
+      title: t('activities.meetup.title'),
+      description: t('activities.meetup.desc')
     },
     {
       emoji: "🛠",
-      title: "Реальный кейс",
-      description: "Решение настоящих бизнес-задач под руководством наставников"
+      title: t('activities.project.title'),
+      description: t('activities.project.desc')
     },
     {
       emoji: "🧪",
@@ -46,11 +48,11 @@ const ActivitiesSection = () => {
             <span>Активности</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            Разнообразные форматы
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> погружения в профессию</span>
+            {t('activities.title').split(' ').slice(0, -2).join(' ')}
+            <span className="bg-gradient-primary bg-clip-text text-transparent"> {t('activities.title').split(' ').slice(-2).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            От наблюдения до практических проектов
+            {t('activities.subtitle')}
           </p>
         </div>
 

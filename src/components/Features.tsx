@@ -10,27 +10,29 @@ import {
   CheckCircle,
   ArrowRight
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Features = () => {
+  const { t } = useLanguage();
   const features = [
     {
       icon: Brain,
-      title: "Профориентационный тест",
-      description: "Узнай свои склонности и способности с помощью научно обоснованного тестирования",
+      title: t('features.testing.title'),
+      description: t('features.testing.desc'),
       color: "text-primary",
       bgColor: "bg-primary/10",
     },
     {
       icon: Users,
-      title: "Наставники и эксперты",
-      description: "Общайся с профессионалами из разных сфер и получай ценные советы",
+      title: t('features.mentoring.title'),
+      description: t('features.mentoring.desc'),
       color: "text-accent",
       bgColor: "bg-accent/10",
     },
     {
       icon: Briefcase,
-      title: "Вакансии и стажировки",
-      description: "Найди первые возможности для работы и стажировок по интересующим направлениям",
+      title: t('features.opportunities.title'),
+      description: t('features.opportunities.desc'),
       color: "text-success",
       bgColor: "bg-success/10",
     },
@@ -50,8 +52,8 @@ const Features = () => {
     },
     {
       icon: TrendingUp,
-      title: "Отслеживание прогресса",
-      description: "Следи за своим развитием и получай персональные рекомендации",
+      title: t('features.networking.title'),
+      description: t('features.networking.desc'),
       color: "text-accent",
       bgColor: "bg-accent/10",
     },
@@ -103,15 +105,14 @@ const Features = () => {
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
             <Users className="w-4 h-4" />
-            <span>Для подростков и студентов</span>
+            <span>{t('features.badge')}</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            Все для успешного
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> старта карьеры</span>
+            {t('features.title').split(' ').slice(0, -2).join(' ')}
+            <span className="bg-gradient-primary bg-clip-text text-transparent"> {t('features.title').split(' ').slice(-2).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Пройди тестирование, найди наставника и получи первые возможности 
-            для развития в интересующей сфере
+            {t('features.subtitle')}
           </p>
         </div>
 
