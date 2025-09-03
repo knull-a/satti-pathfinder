@@ -1,9 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import LogoIcon from "./icon/LogoIcon";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,24 +33,32 @@ const Header = () => {
               >
                 {t('nav.about')}
               </a>
-              <a
-                href="#features"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('nav.students')}
-              </a>
-              <a
-                href="#universities"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('nav.universities')}
-              </a>
-              <a
-                href="#employers"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('nav.employers')}
-              </a>
+              
+              {/* Dropdown for target audience */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors">
+                  {t('nav.forWhom')}
+                  <ChevronDown size={16} />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56">
+                  <DropdownMenuItem asChild>
+                    <a href="#features" className="cursor-pointer">
+                      {t('nav.students')}
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#universities" className="cursor-pointer">
+                      {t('nav.universities')}
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#employers" className="cursor-pointer">
+                      {t('nav.employers')}
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               <a
                 href="#news"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -86,24 +100,34 @@ const Header = () => {
                 >
                   {t('nav.about')}
                 </a>
-                <a
-                  href="#features"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t('nav.students')}
-                </a>
-                <a
-                  href="#universities"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t('nav.universities')}
-                </a>
-                <a
-                  href="#employers"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {t('nav.employers')}
-                </a>
+                
+                {/* Mobile dropdown for target audience */}
+                <div className="space-y-2">
+                  <div className="text-sm font-medium text-foreground">
+                    {t('nav.forWhom')}
+                  </div>
+                  <div className="ml-4 space-y-2">
+                    <a
+                      href="#features"
+                      className="block text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('nav.students')}
+                    </a>
+                    <a
+                      href="#universities"
+                      className="block text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('nav.universities')}
+                    </a>
+                    <a
+                      href="#employers"
+                      className="block text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('nav.employers')}
+                    </a>
+                  </div>
+                </div>
+                
                 <a
                   href="#news"
                   className="text-muted-foreground hover:text-foreground transition-colors"

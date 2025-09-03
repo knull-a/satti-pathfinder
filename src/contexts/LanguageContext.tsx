@@ -14,6 +14,7 @@ const translations = {
   ru: {
     // Header
     'nav.about': 'О платформе',
+    'nav.forWhom': 'Для кого',
     'nav.students': 'Подросткам и студентам',
     'nav.universities': 'Учебным заведениям',
     'nav.employers': 'Работодателям',
@@ -122,6 +123,7 @@ const translations = {
   en: {
     // Header
     'nav.about': 'About Platform',
+    'nav.forWhom': 'For Whom',
     'nav.students': 'For Students',
     'nav.universities': 'For Universities',
     'nav.employers': 'For Employers',
@@ -230,6 +232,7 @@ const translations = {
   kz: {
     // Header
     'nav.about': 'Платформа туралы',
+    'nav.forWhom': 'Кімге арналған',
     'nav.students': 'Жасөспірімдер мен студенттерге',
     'nav.universities': 'Оқу орындарына',
     'nav.employers': 'Жұмыс берушілерге',
