@@ -39,7 +39,7 @@ const Hero = () => {
                 variant="hero" 
                 size="lg" 
                 className="group"
-                onClick={() => window.open('https://app.satti-link.kz', '_blank')}
+                onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
               >
                 {t('hero.cta')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
