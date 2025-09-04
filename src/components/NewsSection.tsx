@@ -4,13 +4,17 @@ import {
   Calendar,
   Newspaper,
   Star,
-  TrendingUp
+  AlertCircle
 } from "lucide-react";
 import NewsletterForm from "./NewsletterForm";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNews } from "@/hooks/useNews";
+import { format } from "date-fns";
+import { getNewsTypeTranslationKey } from "@/lib/utils";
 
 const NewsSection = () => {
   const { t } = useLanguage();
+  const { data: newsData, isLoading, error } = useNews(1, 3);
   
   return (
     <section id="news" className="py-20 md:py-32">
@@ -29,166 +33,126 @@ const NewsSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Featured News - BALA STORE */}
-          <Card className="lg:col-span-2 p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:shadow-glow transition-all duration-300">
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
-                  <Star className="w-4 h-4 inline mr-1" />
-                  {t('news.bala.badge')}
-                </div>
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <Calendar className="w-4 h-4 mr-1" />
-                  {t('news.bala.date')}
-                </div>
-              </div>
-              
-              <h3 className="text-2xl md:text-3xl font-bold">
-                {t('news.bala.title')}
-              </h3>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {t('news.bala.desc')}
-              </p>
-              
-              {/* Instagram Video */}
-              <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden bg-gradient-to-br from-pink-100 to-purple-100">
-                <iframe
-                  src="https://www.instagram.com/reel/DMh8v6sTY3n/embed"
-                  className="w-full h-full border-0"
-                  allowFullScreen
-                  title="BALA STORE Instagram Reel"
-                  loading="lazy"
-                />
-              </div>
-              
-              <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 space-y-4">
-                <h4 className="font-semibold text-lg">🔧 {t('news.bala.benefits.title')}</h4>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>{t('news.bala.benefits.sell')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>{t('news.bala.benefits.experience')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>{t('news.bala.benefits.business')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>{t('news.bala.benefits.earn')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>{t('news.bala.benefits.participate')}</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-accent/10 backdrop-blur-sm rounded-xl p-6 space-y-4">
-                <h4 className="font-semibold text-lg">📅 {t('news.bala.formats.title')}</h4>
-                <div className="grid md:grid-cols-2 gap-3 text-sm text-muted-foreground">
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 mr-2 text-accent" />
-                    {t('news.bala.formats.battle')}
-                  </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 mr-2 text-accent" />
-                    {t('news.bala.formats.fairs')}
-                  </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 mr-2 text-accent" />
-                    {t('news.bala.formats.masterclass')}
-                  </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 mr-2 text-accent" />
-                    {t('news.bala.formats.challenges')}
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-primary/10 backdrop-blur-sm rounded-xl p-6">
-                <h4 className="font-semibold text-lg mb-3">🎯 {t('news.bala.mission.title')}</h4>
-                <p className="text-muted-foreground">
-                  {t('news.bala.mission.desc')}
-                </p>
-              </div>
-              
+        {error && (
+          <Card className="p-8 border-destructive/20 bg-destructive/5">
+            <div className="flex items-center space-x-3 text-destructive">
+              <AlertCircle className="w-5 h-5" />
+              <p>{t('news.error')}</p>
             </div>
           </Card>
+        )}
 
-          {/* Sidebar with course cards and banners */}
-          <div className="space-y-6">
-            {/* Mini Course Card */}
-            <Card className="p-6 bg-gradient-to-br from-primary/5 to-background border-primary/20">
-              <div className="space-y-4">
-                <div className="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium w-fit">
-                  {t('news.courses.career.badge')}
-                </div>
-                <h4 className="text-lg font-bold">{t('news.courses.career.title')}</h4>
-                <p className="text-sm text-muted-foreground">
-                  {t('news.courses.career.desc')}
-                </p>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full"
-                  onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
-                >
-                  {t('news.courses.career.cta')}
-                </Button>
+        {isLoading ? (
+          <div className="grid lg:grid-cols-3 gap-8">
+            <Card className="lg:col-span-2 p-8">
+              <div className="space-y-6 animate-pulse">
+                <div className="h-6 bg-gray-200 rounded w-1/3"></div>
+                <div className="h-8 bg-gray-200 rounded w-2/3"></div>
+                <div className="h-4 bg-gray-200 rounded w-full"></div>
+                <div className="h-64 bg-gray-200 rounded"></div>
               </div>
             </Card>
-
-            {/* Promotional Banner */}
-            <Card className="p-6 bg-gradient-to-br from-success/5 to-background border-success/20">
-              <div className="space-y-4">
-                <div className="bg-success/20 text-success px-3 py-1 rounded-full text-sm font-medium w-fit">
-                  {t('news.events.jobFair.badge')}
-                </div>
-                <h4 className="text-lg font-bold">{t('news.events.jobFair.title')}</h4>
-                <p className="text-sm text-muted-foreground">
-                  {t('news.events.jobFair.desc')}
-                </p>
-                <div className="text-xs text-muted-foreground">
-                  {t('news.events.jobFair.date')}
-                </div>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full"
-                  onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
-                >
-                  {t('news.events.jobFair.cta')}
-                </Button>
-              </div>
-            </Card>
-
-            {/* Another News Card */}
-            <Card className="p-6 bg-gradient-card">
-              <div className="space-y-4">
-                <h4 className="text-lg font-bold">{t('news.events.internships.title')}</h4>
-                <p className="text-sm text-muted-foreground">
-                  {t('news.events.internships.desc')}
-                </p>
-                <div className="text-xs text-muted-foreground">
-                  {t('news.events.internships.date')}
-                </div>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full"
-                  onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
-                >
-                  {t('news.events.internships.cta')}
-                </Button>
-              </div>
-            </Card>
+            <div className="space-y-6">
+              {Array.from({length: 2}).map((_, i) => (
+                <Card key={i} className="p-6">
+                  <div className="space-y-4 animate-pulse">
+                    <div className="h-6 bg-gray-200 rounded w-1/2"></div>
+                    <div className="h-4 bg-gray-200 rounded w-full"></div>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
+        ) : newsData?.data?.news && newsData.data.news.length > 0 ? (
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Featured News - First news item */}
+            <Card className="lg:col-span-2 p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:shadow-glow transition-all duration-300">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3">
+                  <div className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
+                    <Star className="w-4 h-4 inline mr-1" />
+                    {t(`news.types.${getNewsTypeTranslationKey(newsData.data.news[0].type)}`)}
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {format(new Date(newsData.data.news[0].publishedAt), 'dd.MM.yyyy')}
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-bold">
+                  {newsData.data.news[0].title}
+                </h3>
+                
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {newsData.data.news[0].summary}
+                </p>
+                
+                {newsData.data.news[0].imageUrl && (
+                  <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
+                    <img
+                      src={newsData.data.news[0].imageUrl}
+                      alt={newsData.data.news[0].title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                
+                {newsData.data.news[0].tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {newsData.data.news[0].tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </Card>
+
+            {/* Sidebar with other news items */}
+            <div className="space-y-6">
+              {newsData.data.news.slice(1).map((newsItem) => (
+                <Card key={newsItem.id} className="p-6 bg-gradient-to-br from-primary/5 to-background border-primary/20">
+                  <div className="space-y-4">
+                    <div className="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium w-fit">
+                      {t(`news.types.${getNewsTypeTranslationKey(newsItem.type)}`)}
+                    </div>
+                    <h4 className="text-lg font-bold">{newsItem.title}</h4>
+                    <p className="text-sm text-muted-foreground">
+                      {newsItem.summary}
+                    </p>
+                    <div className="text-xs text-muted-foreground">
+                      {format(new Date(newsItem.publishedAt), 'dd.MM.yyyy')}
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <div className="text-xs text-muted-foreground">
+                        {newsItem.author.firstName} {newsItem.author.lastName}
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <Card className="p-8 text-center">
+            <p className="text-muted-foreground">{t('news.empty')}</p>
+          </Card>
+        )}
+
+        {/* More News Button */}
+        <div className="text-center mt-12">
+          <Button 
+            size="lg" 
+            className="px-8 py-3"
+            onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
+          >
+            {t('news.moreDetails')}
+          </Button>
         </div>
 
         {/* Newsletter Subscription */}

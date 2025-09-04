@@ -9,9 +9,9 @@ import {
 import { Globe } from 'lucide-react';
 
 const languages = [
-  { code: 'ru' as Language, name: 'Русский', flag: '🇷🇺' },
-  { code: 'en' as Language, name: 'English', flag: '🇺🇸' },
-  { code: 'kz' as Language, name: 'Қазақша', flag: '🇰🇿' },
+  { code: 'ru' as Language, name: 'Русский' },
+  { code: 'en' as Language, name: 'English' },
+  { code: 'kz' as Language, name: 'Қазақша' },
 ];
 
 export const LanguageSwitcher = () => {
@@ -24,8 +24,7 @@ export const LanguageSwitcher = () => {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="gap-2">
           <Globe size={16} />
-          <span className="hidden sm:inline">{currentLanguage?.flag} {currentLanguage?.name}</span>
-          <span className="sm:hidden">{currentLanguage?.flag}</span>
+          <span className="hidden sm:inline">{currentLanguage?.name}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -35,7 +34,6 @@ export const LanguageSwitcher = () => {
             onClick={() => setLanguage(lang.code)}
             className={language === lang.code ? 'bg-accent' : ''}
           >
-            <span className="mr-2">{lang.flag}</span>
             {lang.name}
           </DropdownMenuItem>
         ))}

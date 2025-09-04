@@ -215,7 +215,17 @@
         "date": "January 20, 2025",
         "cta": "Learn More"
       }
-    }
+    },
+    "types": {
+      "announcement": "Announcement",
+      "update": "Update",
+      "opportunity": "Opportunity",
+      "event": "Event",
+      "general": "General"
+    },
+    "moreDetails": "More Details",
+    "error": "Failed to load news",
+    "empty": "No news available"
   },
   "footer": {
     "brand": {
