@@ -16,22 +16,22 @@ const EmployerSection = () => {
   const employerFeatures = [
     {
       icon: Target,
-      title: "Ранний профориентационный отбор",
-      description: "Участвуйте в формировании профессиональных предпочтений молодежи на раннем этапе",
+      title: t('employers.features.selection.title'),
+      description: t('employers.features.selection.desc'),
       color: "text-primary",
       bgColor: "bg-primary/10"
     },
     {
       icon: Award,
-      title: "Продвижение бренда работодателя",
-      description: "Повышайте узнаваемость компании среди будущих специалистов и создавайте положительный имидж",
+      title: t('employers.features.branding.title'),
+      description: t('employers.features.branding.desc'),
       color: "text-success",
       bgColor: "bg-success/10"
     },
     {
       icon: Users2,
-      title: "Формирование кадрового резерва",
-      description: "Готовьте будущих сотрудников заранее, снижая затраты на поиск и адаптацию персонала",
+      title: t('employers.features.talent.title'),
+      description: t('employers.features.talent.desc'),
       color: "text-accent",
       bgColor: "bg-accent/10"
     }
@@ -72,10 +72,10 @@ const EmployerSection = () => {
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Zap className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl font-bold">Начните сотрудничество уже сегодня</h3>
+              <h3 className="text-2xl font-bold">{t('employers.cta.title')}</h3>
             </div>
             <p className="text-muted-foreground mb-6 text-lg">
-              Присоединяйтесь к ведущим компаниям Казахстана, которые уже инвестируют в будущие кадры
+              {t('employers.cta.desc')}
             </p>
             <div className="flex justify-center">
               <Button 

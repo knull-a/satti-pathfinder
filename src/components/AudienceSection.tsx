@@ -14,10 +14,10 @@ const AudienceSection = () => {
       title: t('audience.students.title'),
       description: t('audience.students.desc'),
       features: [
-        t('features.testing.title'),
-        "Цифровой профиль и портфолио", 
-        "Поиск стажировок и вакансий",
-        t('features.mentoring.title')
+        t('audience.students.features.testing'),
+        t('audience.students.features.profile'),
+        t('audience.students.features.search'),
+        t('audience.students.features.mentoring')
       ],
       icon: Users,
       gradient: "bg-gradient-to-br from-primary/20 to-accent/20"
@@ -26,10 +26,10 @@ const AudienceSection = () => {
       title: t('audience.universities.title'),
       description: t('audience.universities.desc'),
       features: [
-        "Размещение вакансий и задач",
-        "Поиск кандидатов по критериям",
-        "Безопасное взаимодействие",
-        "Модерация всех активностей"
+        t('audience.universities.features.posting'),
+        t('audience.universities.features.search'),
+        t('audience.universities.features.safety'),
+        t('audience.universities.features.moderation')
       ],
       icon: Briefcase,
       gradient: "bg-gradient-to-br from-[hsl(40,85%,60%)]/20 to-primary/20"
@@ -38,10 +38,10 @@ const AudienceSection = () => {
       title: t('audience.mentors.title'),
       description: t('audience.mentors.desc'),
       features: [
-        "Профиль эксперта",
-        "Система менторинга",
-        "Публикация советов",
-        "Рейтинговая система"
+        t('audience.mentors.features.profile'),
+        t('audience.mentors.features.system'),
+        t('audience.mentors.features.content'),
+        t('audience.mentors.features.rating')
       ],
       icon: Shield,
       gradient: "bg-gradient-to-br from-accent/20 to-[hsl(14,65%,50%)]/20"
@@ -58,7 +58,7 @@ const AudienceSection = () => {
               <span className="bg-gradient-primary bg-clip-text text-transparent"> {t('audience.title').split(' ').slice(-1).join(' ')}</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Каждая роль имеет свои уникальные возможности и инструменты для достижения целей
+              {t('audience.subtitle')}
             </p>
           </div>
 

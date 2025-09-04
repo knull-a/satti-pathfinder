@@ -1,0 +1,283 @@
+{
+  "nav": {
+    "about": "About Platform",
+    "forWhom": "For Whom",
+    "students": "For Students",
+    "universities": "For Universities",
+    "employers": "For Employers",
+    "news": "News & Courses",
+    "try": "Try Now"
+  },
+  "hero": {
+    "title": "Opening career paths for teenagers",
+    "subtitle": "Platform connects teenagers, mentors and employers to create a safe ecosystem for career guidance and development",
+    "cta": "Start Journey"
+  },
+  "audience": {
+    "title": "Who is the platform for",
+    "subtitle": "Each role has its unique opportunities and tools to achieve goals",
+    "students": {
+      "title": "For Students & Teenagers",
+      "desc": "Take career orientation tests, find a mentor and get opportunities for career development",
+      "features": {
+        "testing": "Career Orientation Testing",
+        "profile": "Digital profile and portfolio",
+        "search": "Search for internships and jobs",
+        "mentoring": "Personal mentoring"
+      }
+    },
+    "universities": {
+      "title": "For Universities & Employers",
+      "desc": "Attract talented students and create programs for developing future specialists",
+      "features": {
+        "posting": "Job and task postings",
+        "search": "Search candidates by criteria",
+        "safety": "Safe interaction",
+        "moderation": "Moderation of all activities"
+      }
+    },
+    "mentors": {
+      "title": "For Mentors",
+      "desc": "Share experience, help youth find their path and develop the next generation of professionals",
+      "features": {
+        "profile": "Expert profile",
+        "system": "Mentoring system",
+        "content": "Advice publication",
+        "rating": "Rating system"
+      }
+    }
+  },
+  "features": {
+    "badge": "For Students & Teenagers",
+    "title": "Everything for a successful career start",
+    "subtitle": "Take tests, find a mentor and get first opportunities for development in your field of interest",
+    "testing": {
+      "title": "Career Orientation Testing",
+      "desc": "Discover your strengths and find the right direction for development"
+    },
+    "mentoring": {
+      "title": "Personal Mentoring",
+      "desc": "Get support from experienced professionals in your field"
+    },
+    "opportunities": {
+      "title": "Career Opportunities",
+      "desc": "Participate in internships, projects and other development programs"
+    },
+    "safety": {
+      "title": "Safe Environment",
+      "desc": "All contacts are moderated to ensure teenager safety"
+    },
+    "notifications": {
+      "title": "Notification System",
+      "desc": "Get notifications about new opportunities and responses to your profile"
+    },
+    "networking": {
+      "title": "Networking",
+      "desc": "Meet like-minded people and expand your professional connections"
+    }
+  },
+  "activities": {
+    "badge": "Activities",
+    "title": "Diverse formats of professional immersion",
+    "subtitle": "From observation to practical projects",
+    "shadowing": {
+      "title": "Job Shadowing",
+      "desc": "Observe professionals at work in real work environment"
+    },
+    "meetup": {
+      "title": "Meetup",
+      "desc": "Participate in expert meetings and exchange experiences"
+    },
+    "project": {
+      "title": "Project Based",
+      "desc": "Work on real projects under mentor guidance"
+    },
+    "hackathon": {
+      "title": "Hackathon",
+      "desc": "Team competitions for developing innovative solutions"
+    },
+    "hrMeeting": {
+      "title": "HR Meeting",
+      "desc": "Get acquainted with employer requirements and hiring process"
+    },
+    "excursion": {
+      "title": "Company Excursion",
+      "desc": "Immerse in work atmosphere and get familiar with production"
+    },
+    "form": {
+      "title": "Want to participate? Leave your contacts and we will send invitations to new activities",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "submit": "Submit Application"
+    }
+  },
+  "universities": {
+    "badge": "For Colleges & Universities",
+    "title": "Develop students with us",
+    "subtitle": "Integrate our platform into the educational process and help students find their career path",
+    "connect": "Connect Educational Institution",
+    "features": {
+      "profile": {
+        "title": "Digital institution card",
+        "desc": "Create an attractive university profile with program descriptions, advantages and achievements"
+      },
+      "courses": {
+        "title": "Online courses and events placement",
+        "desc": "Publish open lectures, webinars and courses to demonstrate education quality"
+      },
+      "tracks": {
+        "title": "Participation in career guidance tracks",
+        "desc": "Integrate into educational pathways and help teenagers choose their direction"
+      },
+      "communication": {
+        "title": "Direct communication with potential applicants",
+        "desc": "Answer questions, conduct consultations and create personal connection"
+      }
+    },
+    "cta": {
+      "title": "Become part of educational ecosystem",
+      "desc": "Connect to the platform and start interacting with future students today"
+    }
+  },
+  "employers": {
+    "badge": "For Employers",
+    "title": "Attract talented youth",
+    "subtitle": "Invest in your future: form professional culture and create talent pool for long-term company success",
+    "partner": "Become Partner",
+    "features": {
+      "selection": {
+        "title": "Early career guidance selection",
+        "desc": "Participate in shaping professional preferences of youth at early stage"
+      },
+      "branding": {
+        "title": "Employer brand promotion",
+        "desc": "Increase company recognition among future specialists and create positive image"
+      },
+      "talent": {
+        "title": "Talent pool formation",
+        "desc": "Prepare future employees in advance, reducing costs for recruitment and adaptation"
+      }
+    },
+    "cta": {
+      "title": "Start collaboration today",
+      "desc": "Join leading companies in Kazakhstan that already invest in future talent"
+    }
+  },
+  "news": {
+    "title": "Current development opportunities",
+    "badge": "News & Courses",
+    "subtitle": "Follow platform news, participate in courses and don't miss important events",
+    "bala": {
+      "title": "BALA STORE — entrepreneurship for teenagers",
+      "desc": "First offline and online platform in Kazakhstan where teenagers can earn and develop entrepreneurial thinking. It's not just a market — it's an educational and practical environment for young businesspeople aged 12–17.",
+      "benefits": {
+        "title": "What BALA STORE gives to teenagers:",
+        "sell": "Sell their goods or services (handmade, stickers, consultations, baking, etc.)",
+        "experience": "Get real sales experience — with rent, advertising and feedback",
+        "business": "Understand business basics: idea → packaging → promotion → deal",
+        "earn": "Earn first real money",
+        "participate": "Participate in markets, challenges, presentations, show-pitches"
+      },
+      "formats": {
+        "title": "Regular formats:",
+        "battle": "BALA BATTLE — sales competitions",
+        "fairs": "Business fairs in shopping centers and coworking spaces",
+        "masterclass": "Masterclasses from entrepreneurs",
+        "challenges": "Online challenges with mentoring"
+      },
+      "mission": {
+        "title": "Project mission:",
+        "desc": "Develop leadership, independence and creativity in teenagers. The platform becomes part of conscious growing up ecosystem."
+      },
+      "badge": "Recommended",
+      "date": "January 25, 2025"
+    },
+    "courses": {
+      "career": {
+        "badge": "Mini-course",
+        "title": "Career Planning Basics",
+        "desc": "5-day course on how to properly choose a profession and build a career path",
+        "cta": "Enroll"
+      }
+    },
+    "events": {
+      "jobFair": {
+        "badge": "Job Fair 2025",
+        "title": "Job Fair",
+        "desc": "Meet employers, participate in masterclasses and find internships",
+        "date": "February 15-16, Astana",
+        "cta": "Participate"
+      },
+      "internships": {
+        "title": "IT internships from leading companies",
+        "desc": "New opportunities for young developers in Kazakhstan's largest IT companies",
+        "date": "January 20, 2025",
+        "cta": "Learn More"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "desc": "Modern career guidance platform for teenagers. We help find your calling and build a successful career."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About Platform",
+      "features": "Features",
+      "careers": "Career Opportunities",
+      "mentors": "Mentors",
+      "pricing": "Pricing"
+    },
+    "support": {
+      "title": "Support",
+      "help": "Help Center",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "safety": "Safety",
+      "contact": "Contact Us"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "location": "Astana, Kazakhstan"
+    },
+    "copyright": "© 2025 OrkenLink. All rights reserved. Created with ❤️ for developing young talents."
+  },
+  "newsletter": {
+    "title": "Subscribe to News",
+    "desc": "Subscribe to platform news and events. Stay informed about new opportunities and platform updates that are useful for you",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "submit": "Subscribe",
+    "success": {
+      "title": "Subscription confirmed!",
+      "desc": "You will now receive our news and updates."
+    }
+  },
+  "marquee": {
+    "development": "Development",
+    "leadership": "Leadership",
+    "future": "Future",
+    "partnership": "Partnership",
+    "career": "Career",
+    "innovations": "Innovations",
+    "education": "Education",
+    "ecosystem": "Ecosystem",
+    "opportunities": "Opportunities",
+    "success": "Success",
+    "develop": "Develop here!",
+    "build": "Build future!",
+    "start": "Start career!",
+    "lead": "Become leader!",
+    "open": "Open opportunities!",
+    "create": "Create success!",
+    "achieve": "Achieve more!",
+    "choose": "Choose development!",
+    "grow": "Grow together!",
+    "leadToday": "Lead today!"
+  }
+}

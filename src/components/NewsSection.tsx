@@ -7,22 +7,25 @@ import {
   TrendingUp
 } from "lucide-react";
 import NewsletterForm from "./NewsletterForm";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const NewsSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="news" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
             <Newspaper className="w-4 h-4" />
-            <span>Новости и курсы</span>
+            <span>{t('news.badge')}</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            Актуальные возможности
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> для развития</span>
+            {t('news.title').split(' ').slice(0, -2).join(' ')}
+            <span className="bg-gradient-primary bg-clip-text text-transparent"> {t('news.title').split(' ').slice(-2).join(' ')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Следите за новостями платформы, участвуйте в курсах и не пропускайте важные события
+            {t('news.subtitle')}
           </p>
         </div>
 
@@ -33,22 +36,20 @@ const NewsSection = () => {
               <div className="flex items-center space-x-3">
                 <div className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
                   <Star className="w-4 h-4 inline mr-1" />
-                  Рекомендуем
+                  {t('news.bala.badge')}
                 </div>
                 <div className="flex items-center text-sm text-muted-foreground">
                   <Calendar className="w-4 h-4 mr-1" />
-                  25 января 2025
+                  {t('news.bala.date')}
                 </div>
               </div>
               
               <h3 className="text-2xl md:text-3xl font-bold">
-                BALA STORE — предпринимательство для подростков
+                {t('news.bala.title')}
               </h3>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Первая в Казахстане офлайн- и онлайн-платформа, где подростки могут зарабатывать и развивать 
-                предпринимательское мышление. Это не просто маркет — это учебная и практическая среда для 
-                юных бизнесменов 12–17 лет.
+                {t('news.bala.desc')}
               </p>
               
               {/* Instagram Video */}
@@ -63,58 +64,57 @@ const NewsSection = () => {
               </div>
               
               <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 space-y-4">
-                <h4 className="font-semibold text-lg">🔧 Что дает BALA STORE подростку:</h4>
+                <h4 className="font-semibold text-lg">🔧 {t('news.bala.benefits.title')}</h4>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start">
                     <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>Продавать свои товары или услуги (ручная работа, стикеры, консультации, выпечка и др.)</span>
+                    <span>{t('news.bala.benefits.sell')}</span>
                   </li>
                   <li className="flex items-start">
                     <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>Получать опыт реальных продаж — с арендой, рекламой и фидбеком</span>
+                    <span>{t('news.bala.benefits.experience')}</span>
                   </li>
                   <li className="flex items-start">
                     <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>Понимать основы бизнеса: идея → упаковка → продвижение → сделка</span>
+                    <span>{t('news.bala.benefits.business')}</span>
                   </li>
                   <li className="flex items-start">
                     <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>Зарабатывать первые реальные деньги</span>
+                    <span>{t('news.bala.benefits.earn')}</span>
                   </li>
                   <li className="flex items-start">
                     <TrendingUp className="w-4 h-4 mr-2 text-success mt-1 flex-shrink-0" />
-                    <span>Участвовать в маркетах, челленджах, презентациях, шоу-питчингах</span>
+                    <span>{t('news.bala.benefits.participate')}</span>
                   </li>
                 </ul>
               </div>
               
               <div className="bg-accent/10 backdrop-blur-sm rounded-xl p-6 space-y-4">
-                <h4 className="font-semibold text-lg">📅 Регулярные форматы:</h4>
+                <h4 className="font-semibold text-lg">📅 {t('news.bala.formats.title')}</h4>
                 <div className="grid md:grid-cols-2 gap-3 text-sm text-muted-foreground">
                   <div className="flex items-center">
                     <Star className="w-4 h-4 mr-2 text-accent" />
-                    BALA BATTLE — соревнования по продажам
+                    {t('news.bala.formats.battle')}
                   </div>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 mr-2 text-accent" />
-                    Бизнес-ярмарки в ТРЦ и коворкингах
+                    {t('news.bala.formats.fairs')}
                   </div>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 mr-2 text-accent" />
-                    Мастер-классы от предпринимателей
+                    {t('news.bala.formats.masterclass')}
                   </div>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 mr-2 text-accent" />
-                    Онлайн-челленджи с наставничеством
+                    {t('news.bala.formats.challenges')}
                   </div>
                 </div>
               </div>
               
               <div className="bg-primary/10 backdrop-blur-sm rounded-xl p-6">
-                <h4 className="font-semibold text-lg mb-3">🎯 Миссия проекта:</h4>
+                <h4 className="font-semibold text-lg mb-3">🎯 {t('news.bala.mission.title')}</h4>
                 <p className="text-muted-foreground">
-                  Развивать лидерство, самостоятельность и креативность у подростков. 
-                  Платформа становится частью экосистемы осознанного взросления.
+                  {t('news.bala.mission.desc')}
                 </p>
               </div>
               
@@ -127,11 +127,11 @@ const NewsSection = () => {
             <Card className="p-6 bg-gradient-to-br from-primary/5 to-background border-primary/20">
               <div className="space-y-4">
                 <div className="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium w-fit">
-                  Мини-курс
+                  {t('news.courses.career.badge')}
                 </div>
-                <h4 className="text-lg font-bold">Основы карьерного планирования</h4>
+                <h4 className="text-lg font-bold">{t('news.courses.career.title')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  5-дневный курс о том, как правильно выбрать профессию и построить карьерный путь
+                  {t('news.courses.career.desc')}
                 </p>
                 <Button 
                   variant="outline" 
@@ -139,7 +139,7 @@ const NewsSection = () => {
                   className="w-full"
                   onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
                 >
-                  Записаться
+                  {t('news.courses.career.cta')}
                 </Button>
               </div>
             </Card>
@@ -148,14 +148,14 @@ const NewsSection = () => {
             <Card className="p-6 bg-gradient-to-br from-success/5 to-background border-success/20">
               <div className="space-y-4">
                 <div className="bg-success/20 text-success px-3 py-1 rounded-full text-sm font-medium w-fit">
-                  Job Fair 2025
+                  {t('news.events.jobFair.badge')}
                 </div>
-                <h4 className="text-lg font-bold">Ярмарка профессий</h4>
+                <h4 className="text-lg font-bold">{t('news.events.jobFair.title')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  Встречайся с работодателями, участвуй в мастер-классах и находи стажировки
+                  {t('news.events.jobFair.desc')}
                 </p>
                 <div className="text-xs text-muted-foreground">
-                  15-16 февраля, Астана
+                  {t('news.events.jobFair.date')}
                 </div>
                 <Button 
                   variant="outline" 
@@ -163,7 +163,7 @@ const NewsSection = () => {
                   className="w-full"
                   onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
                 >
-                  Участвовать
+                  {t('news.events.jobFair.cta')}
                 </Button>
               </div>
             </Card>
@@ -171,12 +171,12 @@ const NewsSection = () => {
             {/* Another News Card */}
             <Card className="p-6 bg-gradient-card">
               <div className="space-y-4">
-                <h4 className="text-lg font-bold">IT-стажировки от ведущих компаний</h4>
+                <h4 className="text-lg font-bold">{t('news.events.internships.title')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  Новые возможности для молодых разработчиков в крупнейших IT-компаниях Казахстана
+                  {t('news.events.internships.desc')}
                 </p>
                 <div className="text-xs text-muted-foreground">
-                  20 января 2025
+                  {t('news.events.internships.date')}
                 </div>
                 <Button 
                   variant="outline" 
@@ -184,7 +184,7 @@ const NewsSection = () => {
                   className="w-full"
                   onClick={() => window.open('https://app.orkenlink.kz', '_blank')}
                 >
-                  Подробнее
+                  {t('news.events.internships.cta')}
                 </Button>
               </div>
             </Card>

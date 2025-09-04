@@ -11,8 +11,11 @@ import {
   ArrowRight
 } from "lucide-react";
 import LogoIcon from "./icon/LogoIcon";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-card border-t border-border py-16">
       <div className="container mx-auto px-4">
@@ -23,7 +26,7 @@ const Footer = () => {
               <LogoIcon />
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Современная платформа профориентации для подростков. Помогаем найти призвание и построить успешную карьеру.
+              {t('footer.brand.desc')}
             </p>
             <div className="flex space-x-3">
               <Button variant="ghost" size="icon" className="hover:text-primary" onClick={() => window.open('https://www.facebook.com/daryndybala.kz', '_blank')}>
@@ -37,31 +40,31 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Быстрые ссылки</h4>
+            <h4 className="font-semibold text-lg">{t('footer.quickLinks.title')}</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                  О платформе
+                  {t('footer.quickLinks.about')}
                 </a>
               </li>
               <li>
                 <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
-                  Возможности
+                  {t('footer.quickLinks.features')}
                 </a>
               </li>
               <li>
                 <a href="#careers" className="text-muted-foreground hover:text-primary transition-colors">
-                  Карьерные возможности
+                  {t('footer.quickLinks.careers')}
                 </a>
               </li>
               <li>
                 <a href="#mentors" className="text-muted-foreground hover:text-primary transition-colors">
-                  Наставники
+                  {t('footer.quickLinks.mentors')}
                 </a>
               </li>
               <li>
                 <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Тарифы
+                  {t('footer.quickLinks.pricing')}
                 </a>
               </li>
             </ul>
@@ -69,31 +72,31 @@ const Footer = () => {
 
           {/* Support */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Поддержка</h4>
+            <h4 className="font-semibold text-lg">{t('footer.support.title')}</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#help" className="text-muted-foreground hover:text-primary transition-colors">
-                  Центр помощи
+                  {t('footer.support.help')}
                 </a>
               </li>
               <li>
                 <a href="#privacy" className="text-muted-foreground hover:text-primary transition-colors">
-                  Политика конфиденциальности
+                  {t('footer.support.privacy')}
                 </a>
               </li>
               <li>
                 <a href="#terms" className="text-muted-foreground hover:text-primary transition-colors">
-                  Условия использования
+                  {t('footer.support.terms')}
                 </a>
               </li>
               <li>
                 <a href="#safety" className="text-muted-foreground hover:text-primary transition-colors">
-                  Безопасность
+                  {t('footer.support.safety')}
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Связаться с нами
+                  {t('footer.support.contact')}
                 </a>
               </li>
             </ul>
@@ -131,7 +134,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <div className="font-medium">Email</div>
+                <div className="font-medium">{t('footer.contact.email')}</div>
                 <div className="text-sm text-muted-foreground">online@daryndybala.kz</div>
               </div>
             </div>
@@ -140,7 +143,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <div className="font-medium">Телефон</div>
+                <div className="font-medium">{t('footer.contact.phone')}</div>
                 <div className="text-sm text-muted-foreground">+7 747 120 25 57</div>
               </div>
             </div>
@@ -149,8 +152,8 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <div className="font-medium">Адрес</div>
-                <div className="text-sm text-muted-foreground">Астана, Казахстан</div>
+                <div className="font-medium">{t('footer.contact.address')}</div>
+                <div className="text-sm text-muted-foreground">{t('footer.contact.location')}</div>
               </div>
             </div>
           </div>
@@ -158,7 +161,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © 2025 OrkenLink. Все права защищены. Создано с ❤️ для развития молодых талантов.
+              {t('footer.copyright')}
             </p>
           </div>
         </div>

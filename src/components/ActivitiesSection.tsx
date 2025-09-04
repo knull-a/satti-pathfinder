@@ -24,18 +24,18 @@ const ActivitiesSection = () => {
     },
     {
       emoji: "🧪",
-      title: "Хакатон",
-      description: "Командные соревнования по разработке инновационных решений"
+      title: t('activities.hackathon.title'),
+      description: t('activities.hackathon.desc')
     },
     {
       emoji: "🤝",
-      title: "Встреча с HR",
-      description: "Знакомство с требованиями работодателей и процессом найма"
+      title: t('activities.hrMeeting.title'),
+      description: t('activities.hrMeeting.desc')
     },
     {
       emoji: "📍",
-      title: "Экскурсия на предприятие",
-      description: "Погружение в рабочую атмосферу и знакомство с производством"
+      title: t('activities.excursion.title'),
+      description: t('activities.excursion.desc')
     }
   ];
 
@@ -45,7 +45,7 @@ const ActivitiesSection = () => {
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-medium">
             <Zap className="w-4 h-4" />
-            <span>Активности</span>
+            <span>{t('activities.badge')}</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             {t('activities.title').split(' ').slice(0, -2).join(' ')}

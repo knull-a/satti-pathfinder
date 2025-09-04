@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const NewsletterForm = () => {
   const [formData, setFormData] = useState({
@@ -12,13 +13,14 @@ const NewsletterForm = () => {
     email: ""
   });
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the data to your backend
     toast({
-      title: "Подписка оформлена!",
-      description: "Теперь вы будете получать наши новости и обновления.",
+      title: t('newsletter.success.title'),
+      description: t('newsletter.success.desc'),
     });
     setFormData({ name: "", email: "" });
   };
@@ -33,41 +35,41 @@ const NewsletterForm = () => {
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Mail className="w-6 h-6 text-primary" />
-            <h3 className="text-2xl font-bold">Подписаться на новости</h3>
+            <h3 className="text-2xl font-bold">{t('newsletter.title')}</h3>
           </div>
           <p className="text-muted-foreground">
-            Подписаться на новости, события нашей платформы. Будьте в курсе о полезных для вас новых возможностях и обновлениях нашей платформы
+            {t('newsletter.desc')}
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Имя</Label>
+            <Label htmlFor="name">{t('newsletter.name')}</Label>
             <Input
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Ваше имя"
+              placeholder={t('newsletter.namePlaceholder')}
               required
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">{t('newsletter.email')}</Label>
             <Input
               id="email"
               name="email"
               type="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="your@email.com"
+              placeholder={t('newsletter.emailPlaceholder')}
               required
             />
           </div>
 
           <Button type="submit" className="w-full" size="lg">
-            Подписаться
+            {t('newsletter.submit')}
           </Button>
         </form>
       </div>

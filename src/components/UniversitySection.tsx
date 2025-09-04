@@ -17,29 +17,29 @@ const UniversitySection = () => {
   const universityFeatures = [
     {
       icon: School,
-      title: "Цифровая карточка учебного заведения",
-      description: "Создайте привлекательный профиль вуза с описанием программ, преимуществ и достижений",
+      title: t('universities.features.profile.title'),
+      description: t('universities.features.profile.desc'),
       color: "text-accent",
       bgColor: "bg-accent/10"
     },
     {
       icon: Globe,
-      title: "Размещение онлайн-курсов и мероприятий",
-      description: "Публикуйте открытые лекции, вебинары и курсы для демонстрации качества образования",
+      title: t('universities.features.courses.title'),
+      description: t('universities.features.courses.desc'),
       color: "text-primary",
       bgColor: "bg-primary/10"
     },
     {
       icon: Route,
-      title: "Участие в профориентационных треках",
-      description: "Интегрируйтесь в образовательные маршруты и помогайте подросткам выбрать направление",
+      title: t('universities.features.tracks.title'),
+      description: t('universities.features.tracks.desc'),
       color: "text-success",
       bgColor: "bg-success/10"
     },
     {
       icon: MessageSquare,
-      title: "Прямое общение с потенциальными абитуриентами",
-      description: "Отвечайте на вопросы, проводите консультации и создавайте персональную связь",
+      title: t('universities.features.communication.title'),
+      description: t('universities.features.communication.desc'),
       color: "text-warning",
       bgColor: "bg-warning/10"
     }
@@ -80,10 +80,10 @@ const UniversitySection = () => {
           <div className="bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Sparkles className="w-6 h-6 text-accent" />
-              <h3 className="text-2xl font-bold">Станьте частью образовательной экосистемы</h3>
+              <h3 className="text-2xl font-bold">{t('universities.cta.title')}</h3>
             </div>
             <p className="text-muted-foreground mb-6 text-lg">
-              Подключайтесь к платформе и начните взаимодействие с будущими студентами уже сегодня
+              {t('universities.cta.desc')}
             </p>
             <div className="flex justify-center">
               <Button
