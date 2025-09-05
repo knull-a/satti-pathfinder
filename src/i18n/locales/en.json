@@ -266,6 +266,11 @@
     "success": {
       "title": "Subscription confirmed!",
       "desc": "You will now receive our news and updates."
+    },
+    "error": {
+      "title": "Subscription failed",
+      "desc": "Something went wrong. Please try again later.",
+      "alreadySubscribed": "This email is already subscribed."
     }
   },
   "marquee": {

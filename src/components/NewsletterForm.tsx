@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { newsletterService } from "@/services/newsletterService";
+import axios from "axios";
 
 const NewsletterForm = () => {
   const [formData, setFormData] = useState({
@@ -15,14 +17,45 @@ const NewsletterForm = () => {
   const { toast } = useToast();
   const { t } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    toast({
-      title: t('newsletter.success.title'),
-      description: t('newsletter.success.desc'),
-    });
-    setFormData({ name: "", email: "" });
+    
+    try {
+      const response = await newsletterService.toggleUser(formData);
+      
+      if (response.success) {
+        toast({
+          title: t('newsletter.success.title'),
+          description: t('newsletter.success.desc'),
+        });
+        setFormData({ name: "", email: "" });
+      } else {
+        const backendError = (response.error || response.message || '').toLowerCase();
+        const mapped = backendError.includes('already') && backendError.includes('subscribed')
+          ? t('newsletter.error.alreadySubscribed')
+          : t('newsletter.error.desc');
+        toast({
+          title: t('newsletter.error.title'),
+          description: mapped,
+          variant: "destructive",
+        });
+      }
+    } catch (error: unknown) {
+      console.error('Newsletter subscription error:', error);
+      const apiMessage = axios.isAxiosError(error)
+        ? (error.response?.data as { error?: string; message?: string } | undefined)?.error ||
+          (error.response?.data as { error?: string; message?: string } | undefined)?.message
+        : undefined;
+      const normalized = (apiMessage || '').toLowerCase();
+      const mapped = normalized.includes('already') && normalized.includes('subscribed')
+        ? t('newsletter.error.alreadySubscribed')
+        : t('newsletter.error.desc');
+      toast({
+        title: t('newsletter.error.title'),
+        description: mapped,
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

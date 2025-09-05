@@ -90,11 +90,6 @@ const ActivitiesSection = () => {
             </Card>
           ))}
         </div>
-
-        {/* Registration Form */}
-        <div className="max-w-md mx-auto">
-          <ActivitiesForm />
-        </div>
       </div>
     </section>
   );
