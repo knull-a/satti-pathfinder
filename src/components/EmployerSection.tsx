@@ -32,8 +32,8 @@ const EmployerSection = () => {
       icon: Users2,
       title: t('employers.features.talent.title'),
       description: t('employers.features.talent.desc'),
-      color: "text-accent",
-      bgColor: "bg-accent/10"
+      color: "text-primary",
+      bgColor: "bg-primary/10"
     }
   ];
 
