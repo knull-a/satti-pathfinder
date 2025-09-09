@@ -135,7 +135,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-medium">{t('footer.contact.email')}</div>
-                <div className="text-sm text-muted-foreground">online@daryndybala.kz</div>
+                <div className="text-sm text-muted-foreground">online@orkenlink.kz</div>
               </div>
             </div>
             <div className="flex items-center space-x-3">

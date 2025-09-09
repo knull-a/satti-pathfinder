@@ -14,10 +14,10 @@
     "cta": "Start Journey"
   },
   "audience": {
-    "title": "Who is the platform for",
-    "subtitle": "Each role has its unique opportunities and tools to achieve goals",
+    "title": "Career Guidance Platform",
+    "subtitle": "Ecosystem participants get what helps them move forward: students — knowledge, mentors — mission, employers — talent, universities — results",
     "students": {
-      "title": "For Students & Teenagers",
+      "title": "For Teenagers, Students and Everyone",
       "desc": "Take career orientation tests, find a mentor and get opportunities for career development",
       "features": {
         "testing": "Career Orientation Testing",
@@ -37,7 +37,7 @@
       }
     },
     "mentors": {
-      "title": "For Mentors",
+      "title": "For Mentors and Advisors",
       "desc": "Share experience, help youth find their path and develop the next generation of professionals",
       "features": {
         "profile": "Expert profile",
@@ -60,7 +60,7 @@
       "desc": "Get support from experienced professionals in your field"
     },
     "opportunities": {
-      "title": "Career Opportunities",
+      "title": "Career Opportunities and Boundaries",
       "desc": "Participate in internships, projects and other development programs"
     },
     "safety": {
@@ -78,8 +78,8 @@
   },
   "activities": {
     "badge": "Activities",
-    "title": "Diverse formats of professional immersion",
-    "subtitle": "From observation to practical projects",
+    "title": "Professional Expedition",
+    "subtitle": "From career choice to professional self-realization",
     "shadowing": {
       "title": "Job Shadowing",
       "desc": "Observe professionals at work in real work environment"
@@ -114,7 +114,7 @@
   },
   "universities": {
     "badge": "For Colleges & Universities",
-    "title": "Develop students with us",
+    "title": "Open students' path to career and find the best applicants with us",
     "subtitle": "Integrate our platform into the educational process and help students find their career path",
     "connect": "Connect Educational Institution",
     "features": {
@@ -136,14 +136,14 @@
       }
     },
     "cta": {
-      "title": "Become part of educational ecosystem",
-      "desc": "Connect to the platform and start interacting with future students today"
+      "title": "Become part of career guidance ecosystem",
+      "desc": "Connecting applicants, students, universities and employers for confident career path"
     }
   },
   "employers": {
     "badge": "For Employers",
     "title": "Attract talented youth",
-    "subtitle": "Invest in your future: form professional culture and create talent pool for long-term company success",
+    "subtitle": "Select the best future specialists and form sustainable talent potential",
     "partner": "Become Partner",
     "features": {
       "selection": {
@@ -161,13 +161,13 @@
     },
     "cta": {
       "title": "Start collaboration today",
-      "desc": "Join leading companies in Kazakhstan that already invest in future talent"
+      "desc": "Join the platform and form talent pool of future professionals"
     }
   },
   "news": {
     "title": "Current development opportunities",
     "badge": "News & Courses",
-    "subtitle": "Follow platform news, participate in courses and don't miss important events",
+    "subtitle": "Follow platform news, learn and don't miss important events",
     "bala": {
       "title": "BALA STORE — entrepreneurship for teenagers",
       "desc": "First offline and online platform in Kazakhstan where teenagers can earn and develop entrepreneurial thinking. It's not just a market — it's an educational and practical environment for young businesspeople aged 12–17.",
@@ -229,7 +229,7 @@
   },
   "footer": {
     "brand": {
-      "desc": "Modern career guidance platform for teenagers. We help find your calling and build a successful career."
+      "desc": "We help find your calling and build a successful career"
     },
     "quickLinks": {
       "title": "Quick Links",
