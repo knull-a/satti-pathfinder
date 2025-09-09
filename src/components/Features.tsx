@@ -26,8 +26,8 @@ const Features = () => {
       icon: Users,
       title: t('features.mentoring.title'),
       description: t('features.mentoring.desc'),
-      color: "text-accent",
-      bgColor: "bg-accent/10",
+      color: "text-success",
+      bgColor: "bg-success/10",
     },
     {
       icon: Briefcase,
@@ -54,8 +54,8 @@ const Features = () => {
       icon: TrendingUp,
       title: t('features.networking.title'),
       description: t('features.networking.desc'),
-      color: "text-accent",
-      bgColor: "bg-accent/10",
+      color: "text-warning",
+      bgColor: "bg-warning/10",
     },
   ];
 

@@ -19,22 +19,22 @@ const UniversitySection = () => {
       icon: School,
       title: t('universities.features.profile.title'),
       description: t('universities.features.profile.desc'),
-      color: "text-accent",
-      bgColor: "bg-accent/10"
+      color: "text-primary",
+      bgColor: "bg-primary/10"
     },
     {
       icon: Globe,
       title: t('universities.features.courses.title'),
       description: t('universities.features.courses.desc'),
-      color: "text-primary",
-      bgColor: "bg-primary/10"
+      color: "text-success",
+      bgColor: "bg-success/10"
     },
     {
       icon: Route,
       title: t('universities.features.tracks.title'),
       description: t('universities.features.tracks.desc'),
-      color: "text-success",
-      bgColor: "bg-success/10"
+      color: "text-primary",
+      bgColor: "bg-primary/10"
     },
     {
       icon: MessageSquare,
@@ -49,7 +49,7 @@ const UniversitySection = () => {
     <section id="universities" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center space-x-2 bg-accent/30 text-secondary px-4 py-2 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
             <GraduationCap className="w-4 h-4" />
             <span>{t('universities.badge')}</span>
           </div>
@@ -77,9 +77,9 @@ const UniversitySection = () => {
         </div>
 
         <div className="text-center">
-          <div className="bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/20 rounded-2xl p-8 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/5 to-success/5 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-3 mb-4">
-              <Sparkles className="w-6 h-6 text-accent" />
+              <Sparkles className="w-6 h-6 text-primary" />
               <h3 className="text-2xl font-bold">{t('universities.cta.title')}</h3>
             </div>
             <p className="text-muted-foreground mb-6 text-lg">
