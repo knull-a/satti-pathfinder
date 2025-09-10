@@ -115,7 +115,7 @@
   "universities": {
     "badge": "For Colleges & Universities",
     "title": "Open students' path to career and find the best applicants with us",
-    "subtitle": "Integrate our platform into the educational process and help students find their career path",
+    "subtitle": "A platform for choosing a specialty and confidence in the profession",
     "connect": "Connect Educational Institution",
     "features": {
       "profile": {
@@ -284,15 +284,15 @@
     "ecosystem": "Ecosystem",
     "opportunities": "Opportunities",
     "success": "Success",
-    "develop": "Develop here!",
-    "build": "Build future!",
-    "start": "Start career!",
-    "lead": "Become leader!",
-    "open": "Open opportunities!",
-    "create": "Create success!",
-    "achieve": "Achieve more!",
-    "choose": "Choose development!",
-    "grow": "Grow together!",
-    "leadToday": "Lead today!"
+    "develop": "Develop here",
+    "build": "Build future",
+    "start": "Start career",
+    "lead": "Become leader",
+    "open": "Open opportunities",
+    "create": "Create success",
+    "achieve": "Achieve more",
+    "choose": "Choose development",
+    "grow": "Grow together",
+    "leadToday": "Lead today"
   }
 }
